@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="shortcut icon" href="favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <title>Chess Lab</title>
   <style>
     :root {
@@ -502,7 +505,8 @@
       border-radius: 12px;
       box-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
       padding: 12px;
-      min-width: 280px;
+      width: min(92vw, 360px);
+      min-width: 0;
     }
 
     .promotion-title {
@@ -524,8 +528,70 @@
     }
 
     @media (max-width: 980px) {
-      .app { grid-template-columns: 1fr; }
+      body { padding: 16px; }
+      .app {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+      }
       .board { width: min(94vw, 600px); }
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 10px; }
+      .board-wrap,
+      .panel { padding: 12px; }
+
+      .title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+
+      .status,
+      .book-info,
+      .move-feedback {
+        width: 100%;
+        text-align: left;
+      }
+
+      .board {
+        width: min(100%, calc(100vw - 20px - 24px));
+      }
+
+      .controls {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .timeline-buttons {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .board-wrap,
+      .panel { padding: 10px; }
+
+      .board {
+        width: min(100%, calc(100vw - 20px - 20px));
+      }
+
+      .promotion-card {
+        width: min(94vw, 340px);
+        padding: 10px;
+      }
+
+      .promotion-options {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .promotion-choice {
+        min-height: 44px;
+        font-size: 1.35rem;
+      }
     }
   </style>
 </head>

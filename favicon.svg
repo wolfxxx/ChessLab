@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Chess Lab favicon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4e4cb" />
+      <stop offset="100%" stop-color="#b58863" />
+    </linearGradient>
+    <linearGradient id="piece" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2f2a24" />
+      <stop offset="100%" stop-color="#171411" />
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#bg)" />
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="#2e2419" stroke-opacity="0.35" />
+
+  <path
+    d="M22 48h20l2-4-6-2v-6l6-5-3-10-10-4-8 5 2 5-5 5v16z"
+    fill="url(#piece)"
+    stroke="#f7ebd7"
+    stroke-width="1.3"
+    stroke-linejoin="round"
+  />
+  <circle cx="34" cy="24" r="1.5" fill="#f7ebd7" />
+  <rect x="18" y="48" width="28" height="5" rx="2.5" fill="#1d1813" />
+</svg>
