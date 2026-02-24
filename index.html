@@ -23,6 +23,8 @@
 
     * { box-sizing: border-box; }
 
+    html, body { overflow-x: hidden; }
+
     body {
       margin: 0;
       font-family: "Trebuchet MS", "Segoe UI", sans-serif;
@@ -37,6 +39,7 @@
 
     .app {
       max-width: 1240px;
+      width: 100%;
       margin: 0 auto;
       display: grid;
       grid-template-columns: minmax(320px, 760px) minmax(260px, 1fr);
@@ -45,6 +48,7 @@
     }
 
     .board-wrap {
+      min-width: 0;
       background: var(--panel);
       border-radius: 18px;
       padding: 18px;
@@ -368,6 +372,7 @@
     }
 
     .side {
+      min-width: 0;
       display: grid;
       gap: 14px;
     }
@@ -554,8 +559,17 @@
         text-align: left;
       }
 
+      .book-info,
+      .move-feedback {
+        white-space: normal;
+        overflow-wrap: anywhere;
+        overflow: visible;
+        text-overflow: clip;
+      }
+
       .board {
-        width: min(100%, calc(100vw - 20px - 24px));
+        width: 100%;
+        max-width: min(94vw, 560px);
       }
 
       .controls {
@@ -576,7 +590,7 @@
       .panel { padding: 10px; }
 
       .board {
-        width: min(100%, calc(100vw - 20px - 20px));
+        max-width: 92vw;
       }
 
       .promotion-card {
